@@ -9,7 +9,7 @@ source venv/bin/activate
 
 pip3 install -r requirements.txt
 
-python application.py
+python3 application.py
 
 pip3 freeze > requirements.txt
 ```

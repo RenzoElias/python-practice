@@ -1,5 +1,5 @@
-from ia_test.app.twilio.models.insured import Insured
-from ia_test.app.twilio.schemas.insured import insured_schema, insureds_schema
+from app.twilio.models.insured import Insured
+from app.twilio.schemas.insured import insured_schema, insureds_schema
 
 
 def get_insureds():
