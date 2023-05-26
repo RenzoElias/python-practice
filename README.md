@@ -33,17 +33,20 @@ pip3 install
 
 ```bash
 FLASK_ENV="development"
+# FLASK_ENV="production"
 
+# DATABASE
 DATABASE_URI="mysql+pymysql://USER:PASSWORD@DB_HOST/DB_NAME"
 DB_HOST="dadsrerws.shthdsfg.us-east-2.rds.amazonaws.com"
 DB_NAME="db_ress"
 DB_USER="sadds"
-DB_PASS="345g4ghsfdgd
+DB_PASS="345g4ghsfdgd"
 
+# AWS
 AWS_ACCOUNT_ID="58485852"
 AWS_BUCKET_NAME="asdasd-dev"
 
 # TWILIO
-ACCOUNT_SID = ""
-AUTH_TOKEN = ""
+ACCOUNT_SID=""
+AUTH_TOKEN=""
 ```
