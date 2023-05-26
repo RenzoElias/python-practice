@@ -36,7 +36,7 @@ FLASK_ENV="development"
 # FLASK_ENV="production"
 
 # DATABASE
-DATABASE_URI="mysql+pymysql://USER:PASSWORD@DB_HOST/DB_NAME"
+DATABASE_URI="mysql+pymysql://DB_USER:DB_PASSWORD@DB_HOST/DB_NAME"
 DB_HOST="dadsrerws.shthdsfg.us-east-2.rds.amazonaws.com"
 DB_NAME="db_ress"
 DB_USER="sadds"
