@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+  <meta charset="utf-8" />
+
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: "MetropolisRegular";
+      }
+
+      @page {
+        size: A4 portrait;
+      }
+
+      @media all {
+        div.saltopagina {
+          display: none;
+        }
+      }
+
+      @media print {
+        div.saltopagina {
+          display: block;
+          page-break-before: always;
+        }
+      }
+
+      div.saltopagina {
+        page-break-before: always;
+      }
+
+      .new-page {
+        page-break-before: always;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/metropolis"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <!-- PAG 1 CARATULA -->
+    <!-- <table border="0">
+      <tbody>
+        <tr>
+          <td align="center" style="padding-bottom: 15px">
+            <img
+              src="https://www.red-salud.com/images/pdf-images/portada-1.png"
+              style="width: 100%"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="new-page"></div> -->
+
+    <!-- {% for plan_data in data %}
+    {% endfor %} -->
+
+    <!-- INFORMACION -->
+    <table border="0">
+      <tbody>
+        <!--PRIMERA PÁGINA-->
+        <!-- <tr>
+          <td colspan="4" align="center" style="margin: 0; padding: 0">
+            <img
+              src="https://www.red-salud.com/images/pdf-images/encabezado.png"
+              style="width: 100%; margin: 0; padding: 0"
+            />
+            
+          </td>
+        </tr> -->
+        <!-- <img style="width:100px;margin-bottom:15px;" src="https://www.red-salud.com/images/suma/logo-suma.png" /> -->
+        <!-- <tr>
+          <td width="0px;"></td>
+          <td colspan="4" align="left" style="margin: 0; padding: 0">
+            <img style="width:140px; margin:0; padding:0" src="https://www.red-salud.com/images/suma/logo-suma.png" />
+          </td>
+          <td width="80px;"></td>
+        </tr> -->
+        <!-- ESPACIO -->
+        <tr>
+          <!-- <td align="center" style="height: 70px">&nbsp</td> -->
+          <td align="center" style="height: 60px">&nbsp</td>
+        </tr>
+        <tr>
+          <td
+            colspan="6"
+            align="center"
+            style="
+              font-weight: bold;
+              padding-top: 20px;
+              color: #2271bf;
+              font-family: 'MetropolisBold';
+              font-weight: bold;
+              margin: 0;
+            "
+          >
+            <font style="margin: 0; font-size: 20px">
+              Solicitud de Examen de Patología Clínica
+            </font>
+          </td>
+        </tr>
+        
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+          colspan="4"
+          align="left"
+          style="
+            font-weight: normal;
+            padding-bottom: 0px;
+            font-family: Arial;
+            font-size: 14px;
+            margin: 0;
+          ">
+            <font style="font-weight: bold;color: #2271bf;">Orden de atención médica:</font>
+            <font >02935</font>
+            <br>
+            <font >Orden válida hasta el 21/01/2022 (7 días por lógica del sistema desde la emisión)</font>
+          </td>
+          <td width="80px;"></td>
+        </tr>
+
+
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+          colspan="4"
+          align="left"
+          style="
+            font-weight: normal;
+            padding-bottom: 0px;
+            font-family: Arial;
+            font-size: 14px;
+            margin: 0;
+          ">
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Número de Historia Clínica:</font>
+            <font >00456</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Nombres y Apellidos:</font>
+            <font >Maria Perez Ramos</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">DNI:</font>
+            <font >45846473</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Fecha de nacimiento:</font>
+            <font >DD/MM/AA</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Sexo:</font>
+            <font >Femenino</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Fecha y hora de atención:</font>
+            <font >Lunes 14/01/22 3:30pm</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Especialidad:</font>
+            <font >Medicina General</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Médico:</font>
+            <font >M.D. Luis Navarro</font>
+            <br><br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Financiador:</font>
+            <font >Global Red Salud / Particular/</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Plan de salud:</font>
+            <font >Más Salud Digital Premium /Particular</font>
+            <br>
+            <img style="width: 12px;height: auto;" src="https://www.red-salud.com/images/suma/mas.png">&nbsp;
+            <font style="font-weight: bold;color: #2271bf;">Número de contrato/póliza:</font>
+            <font >19892107</font>
+            <br>
+          </td>
+          <td width="80px;"></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+
+    <!-- fondo azul claro #CFEBFE -->
+    <!-- fondo celeste claro #F2F8FF -->
+    <!-- letra azul claro #2068B3 - border celda -->
+    <!-- letra azul oscuro #03336D  -->
+
+    <!-- background: #c9ecf7; -->
+    <!-- tezto azul claro #2271bf -->
+    <!-- background: #366cca; -->
+
+
+
+
+
+    <!-- BREVE HISTORIA -->
+    <table border="0">
+      <tbody>
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            colspan="5"
+            align="left"
+            style="
+              padding-left: 0px;
+              font-family: Arial;
+              font-weight: bold;
+            "
+          >
+            <font style="font-size: 16px; color: #2271bf"
+              >Breve historia clínica:</font
+            >
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            align="left"
+            colspan="5"
+            style="
+              color: black;
+              font-size: 14px;
+              padding-left: 0px;
+              font-family: 'Arial';
+              line-height: 18px;
+            "
+            align="justify"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </td>
+          <td width="80px;"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- DIAG PRINCIPAL -->
+    <table border="0">
+      <tbody>
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            colspan="5"
+            align="left"
+            style="
+              padding-bottom: 8px;
+              font-family: Arial;
+              font-weight: bold;
+              color: #2271bf;
+            "
+          >
+            <font style="font-size: 16px;"
+              >Diagnóstico Principal:</font
+            >
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            align="left"
+            colspan="3"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            K29.0 Gastritis aguda hemorrágica
+          </td>
+          <td
+            align="center"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            Presuntivo
+          </td>
+          <td width="80px;"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- DIAG SECUNDARIO-->
+    <table border="0">
+      <tbody>
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            colspan="5"
+            align="left"
+            style="
+              padding-bottom: 8px;
+              font-family: Arial;
+              font-weight: bold;
+              margin-top: 20px;
+            "
+          >
+            <font style="font-size: 16px; color: #2271bf"
+              >Diagnóstico(s) Secundario(s):</font
+            >
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            align="left"
+            colspan="3"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            K29.0 Gastritis aguda hemorrágica
+          </td>
+          <td
+            align="center"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            Presuntivo
+          </td>
+          <td width="80px;"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- EXAMEN  -->
+    <table border="0">
+      <tbody>
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+        <tr colspan="2">
+          <td width="80px;"></td>
+          <td
+            colspan="4"
+            align="left"
+            style="
+              padding-bottom: 8px;
+              font-family: Arial;
+              font-weight: bold;
+              color: #2271bf;
+            "
+          >
+            <font style="font-size: 16px">Exámenes cubiertos:</font>
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            colspan="2"
+            align="left"
+            style="
+              padding: 5px;
+              background: #CFEBFE;
+              font-family: Arial;
+              font-weight: bold;
+              border: 1px solid #2271bf;
+            "
+          >
+            <font style="font-size: 16px; color: #03336D"
+              >Diagnóstico relacionado
+            </font>
+          </td>
+          <td
+            colspan="2"
+            align="left"
+            style="
+              padding: 5px;
+              background: #CFEBFE;
+              font-family: Arial;
+              font-weight: bold;
+              border: 1px solid #2271bf;
+            "
+          >
+            <font style="font-size: 16px; color: #03336D"
+              >Nombre del examen
+            </font>
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            align="left"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            K29.0
+          </td>
+          <td
+            align="left"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            Radiografía rodilla derecha
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            align="left"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            K29.0
+          </td>
+          <td
+            align="left"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            Radiografía rodilla derecha
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            align="left"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            K29.0
+          </td>
+          <td
+            align="left"
+            colspan="2"
+            style="
+              color: black;
+              font-size: 14px;
+              padding: 5px;
+              font-family: 'Arial';
+              line-height: 18px;
+              border: 1px solid #2271bf;
+            "
+            align="justify"
+          >
+            Radiografía rodilla derecha
+          </td>
+          <td width="80px;"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SECTION CONDICIONES DEL PLAN  -->
+    <table border="0">
+      <tbody>
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+        <tr>
+          <td width="160px;"></td>
+          <td
+            colspan="4"
+            align="center"
+            style="
+              padding: 5px;
+              background: #F2F8FF;
+              font-family: Arial;
+              font-weight: bold;
+            "
+          >
+            <font style="font-size: 14px; color: #03336D"
+              >Condiciones del plan:</font
+            >
+          </td>
+          <td width="160px;"></td>
+        </tr>
+        <tr>
+          <td width="160px;"></td>
+          <td
+            colspan="4"
+            align="center"
+            style="
+              padding: 5px;
+              background: #F2F8FF;
+              font-family: Arial;
+            "
+          >
+            <!-- align="left" -->
+            <font style="font-size: 14px; color: #03336D;"
+              > <font style="font-weight: bold;">LABORATORIO:</font> Según el diagnóstico principal de la atención médica. Cubierto al 100%.</font
+            >
+          </td>
+          <td width="160px;"></td>
+        </tr>
+        <!-- ESPACIO -->
+        <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- FOOTER -->
+    <table>
+      <tbody>
+        <tr>
+          <td width="80px;"></td>
+          <td
+            colspan="3"
+            align="left"
+            style="
+              padding: 5px;
+              font-family: Arial;
+              padding-right:10px;
+              font-size: 14px;
+            "
+          >
+              <!-- width: 350px; -->
+            <font >
+              Para cualquier consulta escríbenos a nuestro WhatsApp 924843520, 
+              <br/>
+              en el horario de lunes a viernes de 9:00 am a 6:00 pm. 
+              <br/>
+              y sábados de 9:00 am a 1:00 pm.
+              <br/>
+              <br/>
+              Si los síntomas persisten se recomienda solicitar nueva teleconsulta 
+              <br/>
+              para orientar sobre los síntomas y manejo.
+              <br/>
+              <br/>
+              <font style="font-weight: bold;font-style: italic;">
+                Health Care Administration SAC
+                <br/>
+                Jorge Chavez 263 – Miraflores
+              </font>
+            </font>
+          </td>
+          <td width="80px;"></td>
+          <td
+            colspan="1"
+            align="right"
+          >
+            <!-- align="left" -->
+            <img
+            src="https://drive.google.com/uc?export=view&id=1HTDKyDYTKzjHzhYDa83-XSAvOzkLnDvG"
+            style="width: 100px"
+            />
+          </td>
+          <td width="80px;"></td>
+        </tr>
+        <!-- ESPACIO -->
+        <!-- <tr>
+          <td align="center" style="height: 10px">&nbsp</td>
+        </tr> -->
+      </tbody>
+    </table>
+
+
+    <!-- IMG FOOTER -->
+    <!-- <table>
+      <tbody>
+        <tr>
+          <td width="80px;"></td>
+          <td align="left">
+            <img
+              src="https://drive.google.com/uc?export=view&id=1VK5MK_Um25bCuUj3IdDcHMl5Axq8AMlY"
+              style="width: 100px"
+            />
+          </td>
+          <td align="left">
+            <img
+              src="https://drive.google.com/uc?export=view&id=18yBQjpmi5iOrhB7_ylFem7pIwT7oWzNb"
+              style="width: 600px"
+            />
+          </td>
+          <td width="0px;"></td>
+        </tr>
+      </tbody>
+    </table> -->
+
+
+    <div class="new-page"></div>
+
+
+  </body>
+</html>

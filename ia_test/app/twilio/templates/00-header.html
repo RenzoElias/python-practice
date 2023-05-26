@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script>
+    function subst() {
+        var vars = {};
+        var query_strings_from_url = document.location.search.substring(1).split('&');
+        for (var query_string in query_strings_from_url) {
+            if (query_strings_from_url.hasOwnProperty(query_string)) {
+                var temp_var = query_strings_from_url[query_string].split('=', 2);
+                vars[temp_var[0]] = decodeURI(temp_var[1]);
+            }
+        }
+        var css_selector_classes = ['page', 'frompage', 'topage', 'webpage', 'section', 'subsection', 'date', 'isodate', 'time', 'title', 'doctitle', 'sitepage', 'sitepages'];
+        for (var css_class in css_selector_classes) {
+            if (css_selector_classes.hasOwnProperty(css_class)) {
+                var element = document.getElementsByClassName(css_selector_classes[css_class]);
+                for (var j = 0; j < element.length; ++j) {
+                    element[j].textContent = vars[css_selector_classes[css_class]];
+                }
+            }
+        }
+
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function substitute(name) {
+            var value = getParameterByName(name);
+            var elements = document.getElementsByClassName(name);
+
+            for (var i = 0; elements && i < elements.length; i++) {
+                elements[i].textContent = value;
+            }
+        }
+
+        ['code', 'pageTest'/*, 'topage', 'page',.. etc and any variable you would want to replace */]
+            .forEach(function(param) {
+                substitute(param);
+            });
+    }
+    </script>
+</head>
+<body style="border:0; margin: 0;" onload="subst()">
+    <!--
+    <table>
+        <tr>
+            <td width="30px;"></td>
+            <td align="left" style="font-size: 10; color: #366cca;">
+                V1-2022 Pág.<span class="page"></span> I Condiciones Particulares <br>
+                <span class="code"></span>
+            </td>
+        </tr>
+    </table>
+    -->
+    <!-- <table align="center" style="width: 100%;">
+        <tr>
+            <td width="30px;"></td>
+            <td colspan="4" align="center" style="font-size: 10; color: #366cca;text-align: center;">
+                Para cualquier consulta respecto al presente documento comunícate a nuestra
+            </td>
+            <td width="30px;"></td>
+        </tr>
+        <tr>
+            <td width="30px;"></td>
+            <td colspan="4" align="center" style="font-size: 10; color: #366cca;text-align: center;">
+                Central Telefónica: <b style="display: inline-block;color: #01387B;">
+                    (01) 445-3019.
+                </b>
+            </td>
+            <td width="30px;"></td>
+        </tr>
+    </table> -->
+
+    <table>
+        <tbody>
+            <tr>
+                <td width="80px;"></td>
+                <td align="left" style="margin: 0; padding: 0" width="350px;">
+                  <img style="width:110px; margin:0; padding:0" src="https://www.red-salud.com/images/suma/logo-suma.png" />
+                </td>
+                <!-- <td width="80px;"></td> -->
+                <td align="left" style="margin: 0; padding: 0">
+                  <img style="width:380px; margin:0; padding:0" src="https://sumasalud-dev.s3.amazonaws.com/assets/header_right.png" />
+                </td>
+                <td width="80px;"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
