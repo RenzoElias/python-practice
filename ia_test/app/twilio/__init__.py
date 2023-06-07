@@ -17,3 +17,6 @@ def callback():
 # def get_asegurado_combo(nro_documento, tipo_proc, idcont):
 #     data = registercombo.get_asegurados_combo(nro_documento, tipo_proc, idcont)
 #     return jsonify(data)
+
+
+

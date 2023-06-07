@@ -5,7 +5,7 @@ from twilio.rest import Client
 
 # Configurar las credenciales de Twilio
 account_sid = 'ACc50a1df08c9cc277ccf8fbbc6ca57a93'
-auth_token = '1e70c2df0f3c2a07f201e7772c8bfa2f'
+auth_token = '95bd30ff25493168ca2ab0c31e026063'
 client = Client(account_sid, auth_token)
 
 # import openai
