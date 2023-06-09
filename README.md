@@ -14,7 +14,7 @@ python3 application.py
 pip3 freeze > requirements.txt
 ```
 
-### Virtual Env
+### Virtual Env (BASE)
 
 ```bash
 pip3 install
