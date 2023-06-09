@@ -8,7 +8,7 @@ bp = Blueprint('twilio', __name__, template_folder='templates')
 def home():
     return jsonify({"response": "Module Twilio API"})
 
-@bp.route('/callback', methods=['POST','GET'])
+@bp.route('/callback', methods=['POST'])
 def callback():
     data = twilio.getCallBack()
     return jsonify(data)

@@ -1,18 +1,20 @@
 from flask import request, copy_current_request_context
 from datetime import date, datetime
 
+import os
 from twilio.rest import Client
+from twilio.twiml.voice_response import Gather, VoiceResponse, Dial
 
 # Configurar las credenciales de Twilio
-account_sid = 'ACc50a1df08c9cc277ccf8fbbc6ca57a93'
-auth_token = '95bd30ff25493168ca2ab0c31e026063'
+account_sid = os.getenv('ACCOUNT_SID')
+auth_token = os.getenv('AUTH_TOKEN')
 client = Client(account_sid, auth_token)
 
 # import openai
 # openai.api_key = 'TU_API_KEY'
 
 
-def getCallBack():
+def getCallBack2():
     try:
         
         body= request.json
@@ -66,6 +68,42 @@ def getCallBack1():
         return {
             "success": True,
             "data": data
+        }
+    except Exception as e:
+        print(e)
+        return {"success": False}
+
+def getCallBack():
+    try:
+        # account_sid = os.getenv('ACCOUNT_SID')
+        # auth_token = os.getenv('AUTH_TOKEN')
+        # client = Client(account_sid, auth_token)
+        # body= request.json
+        data = None
+        
+        initial = "Hola mundo"
+        
+        # breakpoint()
+        
+        call = client.calls.create(
+                        twiml='<Response><Say>Hola Mundo</Say></Response>',
+                        # twiml=f'<Response><Say>{initial}</Say></Response>',
+                        # url='http://demo.twilio.com/docs/voice.xml',
+                        # to='+51934868395',
+                        to='+51929202772',
+                        # from_='+51929202772'
+                        from_='+13613487918'
+                    )
+        
+        # breakpoint()
+        
+        print(call)
+        print(call.sid)
+        
+        
+        return {
+            "success": True,
+            "data": call
         }
     except Exception as e:
         print(e)
